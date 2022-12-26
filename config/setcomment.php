@@ -6,7 +6,8 @@
     $text = $_GET['comment'];
     $post_id = $_GET['post_id'];
     $page = $_GET['page'];
-    $date = time()+3*60*60;
+    date_default_timezone_set('Europe/Moscow');
+    $date = date("Y-d-m H:i:s");
     mysqli_query($connect, "INSERT INTO `comments` (`id`, `text`, `date`) VALUES ($post_id, '$text', '$date')");
     header("location: ../mainpage.php?page=$page");
 ?>
