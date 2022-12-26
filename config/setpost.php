@@ -4,7 +4,9 @@
         header("location: ../mainpage.php");
     }
     $text = $_GET["new_post"];
-    $date = time()+3*60*60;
+  
+    date_default_timezone_set('Europe/Moscow');
+    $date = date("Y-d-m H:i:s");
     mysqli_query($connect, "INSERT INTO `posts` (`id`, `text`, `date`) VALUES (NULL, '$text', '$date')");
     $posts = mysqli_fetch_all(mysqli_query($connect, 'SELECT * FROM `posts` ORDER BY `id` DESC'));
     if (isset($posts[100])) {
