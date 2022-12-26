@@ -24,7 +24,7 @@ if (!isset($posts[($page_num-1)*5])){
         <tr><td width="75%">
                 <textarea class = "textareastyle" id="new_post" name="new_post" cols="75%" rows="5px" ></textarea>
             </td><td width="25%">
-                <input class = "enter_button" type="submit" value="create post" width="25%">
+                <input class = "enter_button" type="submit" value="Отправить сообщение" width="25%">
             </td></tr>
     </table>
 </form>
@@ -38,7 +38,7 @@ if (!isset($posts[($page_num-1)*5])){
             echo "
                         <tr><td colspan='2' class = 'main_background'>
                             <p style='text-align: right; margin-right: 15px'>$date</p>
-                            <p class='word'>$post[1]</p>
+                            <p class='word'>$post[1]</p>en
                             <hr class='main_line'>
                             <table style='width:25%'>
                                 <tr>
@@ -70,7 +70,7 @@ if (!isset($posts[($page_num-1)*5])){
                                     <tr><td width='75%'>
                                         <textarea class = 'new_comment_background' id='comment' name='comment' cols='75%' rows='5px'></textarea>
                                     </td><td width='25%'>
-                                        <input class = 'comment_button' type='submit' value='comment' width='25%'>
+                                        <input class = 'comment_button' type='submit' value='Комментировать' width='25%'>
                                     </td></tr>
                                 </form>
                             </table><table style='width: 95%; margin-top:30px'>";
